@@ -4,6 +4,9 @@
 #include <unistd.h>
 #include "screen.h"
 #include "comm.h"
+#include "sound.h"
+
+
 int main(){
 	Position cur = getscreensize();   // get screensize
 	char postdata[100];
@@ -71,5 +74,12 @@ int main(){
 	resetscreen();
 	printf("This is default color\n");
 */
+	FILE *fp = fopen("test.wav", "r"); // open the file in read-only
+	WAVheader h = readwavhdr(fp);
+	fclose(fp);
+	displaywavhdr(h);
+	
+
+
 
 }
