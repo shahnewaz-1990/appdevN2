@@ -14,7 +14,7 @@ void displaywavhdr(WAVheader h){
 	for(int i=0; i<4; i++)
 		printf("%c", h.chunkID[i]);
 	printf("\n");
-	printf("Chunk size: %d\n", h.chunkSize); //class 11
+	printf("Chunk size: %d\n", h.chunkSize); 
 	printf("Number of channels: %d\n", h.numChannels); 
 	printf("Sample rate: %d\n", h.sampleRate);
 	printf("Bits per sample: %d\n", h.bitsPerSample);
@@ -25,7 +25,7 @@ void displaywavhdr(WAVheader h){
 } //class 11
 
 
-/*
+
 void wavdata(WAVheader h, FILE *fp){
 	// for sample rate 16000sps,we need to read 2000 samples to calculate a 
 	// "Fast" decible value. A decibel value is always calculated by (rms) formula
@@ -66,5 +66,5 @@ void wavdata(WAVheader h, FILE *fp){
 #endif
 
 	}
-}*/
+}
 //class 12
